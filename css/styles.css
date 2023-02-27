@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica;
+}
+
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+}
+
+#calc {
+  background-color: #c3c3c3;
+  color: #000;
+  width: 400px;
+  padding: 0.6em;
+  display: flex;
+  flex-direction: column;
+}
+
+#calc h3 {
+  font-size: 1em;
+  font-weight: 300;
+  color: #444;
+}
+
+#operations {
+  text-align: right;
+}
+
+#previous-operation,
+#current-operation {
+  min-height: 1.6em; /*Deixar o espaço dos números já separado*/
+  overflow-wrap: break-word; /*Quebrar a linha caso a qnt de números inserido seja grande*/
+  padding: 0.2em;
+}
+
+#previous-operation {
+  color: #666;
+}
+
+#current-operation {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+#buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3px;
+}
+
+#buttons-container button {
+  height: 4em;
+  font-size: 1.2em;
+  background-color: #dbdbdb;
+  border: 2px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+#buttons-container .number {
+  background-color: #f3f3f3;
+}
+
+#buttons-container button:hover {
+  background-color: #bababa;
+  border-color: #999;
+}
+
+#buttons-container #equal-btn {
+  grid-column: span 2;
+  background-color: #6199c9;
+}
+
+#buttons-container #equal-btn:hover {
+  background-color: #3a91d9;
+}
